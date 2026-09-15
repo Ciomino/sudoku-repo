@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  sudoku:
+    build: .
+    container_name: sudoku-app
+    restart: unless-stopped
+    ports:
+      - "8081:5000"
+    volumes:
+      - sudoku-data:/data
+
+volumes:
+  sudoku-data:
